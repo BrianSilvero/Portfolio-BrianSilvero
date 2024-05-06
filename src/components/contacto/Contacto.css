@@ -1,0 +1,141 @@
+.conctacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 0px 20px 80px 20px;
+
+  .contacto-titulo {
+    position: relative;
+    h2 {
+      width: auto;
+      padding: 0px 30px;
+      font-size: 50px;
+      font-weight: 600;
+    }
+  }
+  .contacto-seccion {
+    display: flex;
+    gap: 30px;
+
+    .conctacto-izquierda {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      p {
+        max-width: 550px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .contacto-detalle {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        font-size: 18px;
+
+        .iconos {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .contacto-derecha {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 2px;
+
+      label {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      input {
+        border: none;
+        width: 325px;
+        height: 30px;
+        padding-left: 20px;
+        border-radius: 2px;
+        background: #bcbcef;
+        color: white;
+        font-family: "Outfit";
+        font-size: 16px;
+      }
+      textarea {
+        width: 325px;
+        border: none;
+        padding: 12.5px;
+        border-radius: 2px;
+        background: #bcbcef;
+        font-family: "Outfit";
+        font-size: 16px;
+
+        &::placeholder {
+          color: #828282;
+        }
+      }
+      button {
+        border: none;
+        color: white;
+        border-radius: 10px;
+        background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 25px;
+        margin-top: 10px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .conctacto {
+    gap: 30px;
+    margin: 0px 10px 45px 10px;
+
+    .contacto-titulo {
+      h2 {
+        font-size: 40px;
+        padding: 0;
+      }
+    }
+    .contacto-seccion {
+      flex-direction: column;
+
+      .conctacto-izquierda {
+        gap: 20px;
+        h2 {
+          font-size: 20px;
+        }
+        .contacto-detalle {
+          font-size: 16px;
+        }
+      }
+      .contacto-derecha {
+        label {
+          font-size: 16px;
+        }
+        input {
+          width: 100%;
+          font-size: 18px;
+        }
+        textarea {
+          width: 95%;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
