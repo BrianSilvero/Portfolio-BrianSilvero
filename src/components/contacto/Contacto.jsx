@@ -2,7 +2,7 @@ import "../contacto/Contacto.css";
 import email from "../../assets/email.png";
 import telefono from "../../assets/telefono.png";
 import linkedin from "../../assets/linkedin.png";
-import swal from 'sweetalert'
+import swal from 'sweetalert';
 
 const Contacto = () => {
 
