@@ -1,6 +1,7 @@
 import "../footer/Footer.css";
 import logo from "../../assets/logo-portfolio.png";
 import user from "../../assets/user.png";
+
 const Footer = () => {
   return (
     <div className="footer">
@@ -14,8 +15,8 @@ const Footer = () => {
         </div>
         <div className="footer-top-derecha">
           <div className="footer-email-input">
-            <img src={user} className="user_img"  alt="usuario" />
-            <input type="email" placeholder="Ingresa tu mail" />
+            <img src={user} className="user_img" alt="usuario" />
+            <input type="email" id="email" name="email" placeholder="Ingresa tu mail" autoComplete="email" />
           </div>
           <div className="footer-subcribite">Suscribite</div>
         </div>
