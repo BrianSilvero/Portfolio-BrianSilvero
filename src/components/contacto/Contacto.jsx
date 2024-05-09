@@ -2,7 +2,7 @@ import "../contacto/Contacto.css";
 import email from "../../assets/email.png";
 import telefono from "../../assets/telefono.png";
 import linkedin from "../../assets/linkedin.png";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 
 const Contacto = () => {
 
@@ -25,7 +25,7 @@ const Contacto = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      swal({
+      Swal.fire({
         title: "Muchas gracias!",
         text: "Tu mensaje ha sido enviado con exito! ",
         icon: "success",

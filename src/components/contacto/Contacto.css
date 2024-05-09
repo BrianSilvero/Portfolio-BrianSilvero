@@ -64,7 +64,8 @@
         padding-left: 20px;
         border-radius: 2px;
         background: #bcbcef;
-        color: white;
+        color: black;
+        font-weight: 400;
         font-family: "Outfit";
         font-size: 16px;
       }
