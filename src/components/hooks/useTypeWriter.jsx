@@ -21,7 +21,7 @@ const useTypewriter = (text, speed, skip) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.5 } // Este parametro inidica en que momento quiero que se ejecute la maquina de escribir
+      { threshold: 0.5 } // Este parámetro indica en qué momento quiero que se ejecute la máquina de escribir
     );
 
     if (elementRef.current) {
@@ -40,10 +40,16 @@ const useTypewriter = (text, speed, skip) => {
       {isInView ? (
         <>
           <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+                .typeString(text)
+                .callFunction(() => {
+                  setShowText(true); // Mostrar el texto completo después de terminar el efecto
+                })
+                .start();
+            }}
             options={{
-              strings: [text],
-              autoStart: true,
-              delay: speed            
+              delay: speed
             }}
           />
         </>
@@ -51,8 +57,8 @@ const useTypewriter = (text, speed, skip) => {
     </div>
   ) : (
     <div>
-      {text}
-      <Cursor cursorColor="#96b3ff" cursorStyle="|" />
+      <span dangerouslySetInnerHTML={{ __html: text }}/>
+      <Cursor/>
     </div>
   );
 
