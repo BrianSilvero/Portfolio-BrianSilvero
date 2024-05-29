@@ -40,7 +40,7 @@ const NavBar = () => {
           )}
         </li>
         <li>
-          <AnchorLink className="anchor-link" offset={65} href="#about">
+          <AnchorLink className="anchor-link" offset={78} href="#about">
             <p onClick={() => setMenu("sobremi")}>Sobre mi</p>
           </AnchorLink>
           {menu === "sobremi" ? (
@@ -60,7 +60,7 @@ const NavBar = () => {
           )}
         </li>
         <li>
-          <AnchorLink className="anchor-link" offset={65} href="#contacto">
+          <AnchorLink className="anchor-link" offset={75} href="#contacto">
             <p onClick={() => setMenu("contacto")}>Contacto</p>
           </AnchorLink>
           {menu === "contacto" ? (
@@ -71,7 +71,7 @@ const NavBar = () => {
         </li>
       </ul>
       <div className="nav-conectar">
-        <AnchorLink className="anchor-link" offset={65} href="#contacto">
+        <AnchorLink className="anchor-link" offset={75} href="#contacto">
           Contactate conmigo
         </AnchorLink>
       </div>

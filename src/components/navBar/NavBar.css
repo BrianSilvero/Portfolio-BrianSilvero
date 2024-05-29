@@ -59,6 +59,7 @@
   }
 }
 .underline{
+  display: flex;
   width: 26px;
 }
 .anchor-link{
