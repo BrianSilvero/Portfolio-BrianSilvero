@@ -56,7 +56,7 @@ const useTypewriter = (text, speed, skip) => {
       ) : null}
     </div>
   ) : (
-    <div>
+    <div className="maquina-de-escribir">
       <span dangerouslySetInnerHTML={{ __html: text }}/>
       <Cursor/>
     </div>

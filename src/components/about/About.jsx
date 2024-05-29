@@ -1,11 +1,26 @@
 import "../about/About.css";
-import { useState } from 'react';
-import useTypewriter from '../hooks/useTypeWriter'; 
-
+import { useState } from "react";
+import useTypewriter from "../hooks/useTypeWriter";
 
 const About = () => {
   const [skip, setSkip] = useState(false);
-  const text = `Hola! Bienvenidos a mi portfolio. <br><br> Soy un estudiante apasionado de la carrera de ingeniería en sistemas informáticos, dedicado a insertarme en el mundo de la programación y desarrollar habilidades en el ámbito tecnológico. Actualmente en paralelo estoy haciendo la carrera de Desarrollador Full-Stack en la plataforma de Coder-House. Mi objetivo es convertirme en un profesional altamente competente en el desarrollo de aplicaciones web y móviles. A través de un constante aprendizaje y práctica, estoy adquiriendo conocimientos de programación como HTML, CSS, JavaScript, así como en frameworks y bibliotecas populares como React y Node.js. Estoy emocionado por contribuir en proyectos innovadores, colaborar con equipos multidisciplinarios y enfrentar nuevos desafíos tecnológicos que me permitan seguir creciendo y destacándome en el campo de la programación.`;
+  const text = `¡Hola! Bienvenidos a mi portfolio <br><br> Soy estudiante de Ingeniería en Sistemas Informáticos, enfocado en ingresar al mundo de la programación y desarrollar habilidades tecnológicas. Actualmente, complemento mi formación con la carrera de Desarrollador Full-Stack en CoderHouse.
+  <br><br>
+  Además de mi educación formal, he ampliado mis conocimientos de forma autodidacta, leyendo documentación y viendo videos de programadores experimentados. Mi objetivo es convertirme en un profesional en el desarrollo de aplicaciones web.
+  <br><br>
+  Tengo experiencia en programación con HTML, CSS, y JavaScript, y manejo frameworks y bibliotecas como React JS y Node.js. He obtenido los siguientes certificados en CoderHouse:
+  <br><br>
+  - Data Analytics: MICROSOFT SQL SERVER, POWER BI y EXCEL
+  <br>
+  - Desarrollador Web: HTML, CSS, SASS, BOOSTRAP, GIT, GITHUB.
+  <br>
+  - JavaScript.
+  <br>
+  - React-JS (En curso)
+  <br><br>
+  Estoy dispuesto a contribuir en proyectos innovadores, aportando mis conocimientos y aprendiendo continuamente en el campo de la programación.
+  <br><br>
+  Gracias por visitar mi portfolio. Estoy disponible para colaborar en tus proyectos.`;
 
   const typewriterElement = useTypewriter(text, 30, skip);
 
@@ -15,8 +30,12 @@ const About = () => {
         <h2>Sobre mí</h2>
       </div>
       <div className="about-seccion">
-        {typewriterElement} 
-        <button onClick={() => setSkip(true)}>Omitir</button> {/* Botón para omitir el efecto */}
+        <div className="about-seccion-parrafo">{typewriterElement}</div>
+        <div className="about-seccion-button">
+          <button onClick={() => setSkip(true)} className="retro-button">
+            Omitir
+          </button>
+        </div>
       </div>
     </div>
   );
