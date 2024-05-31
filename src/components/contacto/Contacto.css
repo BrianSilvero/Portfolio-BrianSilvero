@@ -51,11 +51,14 @@
       display: flex;
       flex-direction: column;
       align-items: start;
-      gap: 2px;
+      gap: 13px;
 
       label {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
+        background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
       input {
         border: none;

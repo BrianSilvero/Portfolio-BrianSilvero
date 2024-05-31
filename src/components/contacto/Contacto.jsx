@@ -2,10 +2,10 @@ import "../contacto/Contacto.css";
 import email from "../../assets/email.png";
 import telefono from "../../assets/telefono.png";
 import linkedin from "../../assets/linkedin.png";
-import Swal from 'sweetalert2'
+import github from "../../assets/github.svg";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -19,9 +19,9 @@ const Contacto = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
@@ -29,7 +29,7 @@ const Contacto = () => {
         title: "Muchas gracias!",
         text: "Tu mensaje ha sido enviado con exito! ",
         icon: "success",
-        buttons: "Aceptar"
+        buttons: "Aceptar",
       });
     }
   };
@@ -48,21 +48,45 @@ const Contacto = () => {
             ponerte en contacto en cualquier momento. Contactame a través de:
           </p>
           <div className="contacto-detalle">
-            <img src={telefono} alt="telefono" className="iconos" /> <p>(+549) 11 2512-0868</p>
+            <img src={telefono} alt="telefono" className="iconos" />{" "}
+            <p>(+549) 11 2512-0868</p>
           </div>
           <div className="contacto-detalle">
-            <img src={email} alt="email" className="iconos"/> <p>briandavidsilvero@gmail.com</p>
+            <img src={email} alt="email" className="iconos" />{" "}
+            <p>briandavidsilvero@gmail.com</p>
           </div>
           <div className="contacto-detalle">
             <img src={linkedin} alt="Linkedin" className="iconos" />
-            <p>www.linkedin.com/in/brian-david-silvero</p>
+            <a href="https://www.linkedin.com/in/brian-david-silvero/">
+              <p>https://www.linkedin.com/in/brian-david-silvero/</p>
+            </a>
+          </div>
+          <div className="contacto-detalle">
+            <img src={github} alt="Github" className="iconos" />
+            <a href="https://github.com/BrianSilvero">
+              <p>https://github.com/BrianSilvero</p>
+            </a>
           </div>
         </div>
         <form onSubmit={onSubmit} className="contacto-derecha">
           <label htmlFor="name">Tu Nombre</label>
-          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required autoComplete="name" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ingresa tu nombre"
+            required
+            autoComplete="name"
+          />
           <label htmlFor="email">Tu Email</label>
-          <input type="email" id="email" name="email" placeholder="Ingresa tu email" required autoComplete="email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingresa tu email"
+            required
+            autoComplete="email"
+          />
           <label htmlFor="mensaje">Escribi tu mensaje</label>
           <textarea
             id="mensaje"
