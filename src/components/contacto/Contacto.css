@@ -12,7 +12,8 @@
       width: auto;
       padding: 0px 30px;
       font-size: 50px;
-      font-weight: 600;
+      font-weight: 650;
+      font-family: "Signika", sans-serif;
     }
   }
   .contacto-seccion {
@@ -22,10 +23,11 @@
     .conctacto-izquierda {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
       h2 {
         font-size: 24px;
         font-weight: 700;
+        font-family: "Outfit";
         background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -35,15 +37,182 @@
         font-size: 16px;
         line-height: 20px;
       }
+
       .contacto-detalle {
         display: flex;
-        flex-direction: column;
-        gap: 1px;
+        align-items: center;
+        padding: 5px;
+        gap: 40px;
         font-size: 18px;
+        font-family: "Outfit";
+        font-weight: 400;
 
-        .iconos {
-          width: 30px;
-          height: 30px;
+        &:nth-child(3) {
+          background-color: #eeeeee;
+          border: 0.3px solid rgba(0, 0, 0, 0.543);
+          border-radius: 5px;
+          box-shadow: 0px 5px 10px black;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0 100%;
+          background-image: linear-gradient(
+            to right,
+            rgb(23, 187, 31),
+            rgb(23, 187, 31)
+          );
+          transition: background-size 0.4s ease-in-out, color 0.4s ease-in-out;
+          &:hover {
+            color: white;
+            border: 0.3px solid #eeeeee;
+            background-image: linear-gradient(
+              rgb(23, 187, 31),
+              rgb(23, 187, 31)
+            );
+            background-size: 100% 100%;
+            background-position: 50%;
+          }
+        }
+        &:nth-child(4) {
+          background-color: #eeeeee;
+          border: 0.3px solid rgba(0, 0, 0, 0.543);
+          border-radius: 5px;
+          box-shadow: 0px 5px 10px black;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0 100%;
+          background-image: linear-gradient(
+            to right,
+            rgb(202, 31, 31),
+            rgb(202, 31, 31)
+          );
+          transition: background-size 0.4s ease-in-out, color 0.4s ease-in-out;
+          &:hover {
+            color: white;
+            border: 0.3px solid #eeeeee;
+            background-image: linear-gradient(
+              rgb(202, 31, 31),
+              rgb(202, 31, 31)
+            );
+            background-size: 100% 100%;
+            background-position: 50%;
+          }
+        }
+        &:nth-child(5) {
+          text-decoration: none;
+          background-color: #eeeeee;
+          border: 0.3px solid rgba(0, 0, 0, 0.543);
+          border-radius: 5px;
+          box-shadow: 0px 5px 10px black;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0 100%;
+          background-image: linear-gradient(
+            to right,
+            rgb(50, 150, 226),
+            rgb(50, 150, 226)
+          );
+          transition: background-size 0.4s ease-in-out, color 0.4s ease-in-out;
+          &:hover {
+            color: white !important;
+            border: 0.3px solid #eeeeee;
+            background-image: linear-gradient(
+              rgb(50, 150, 226),
+              rgb(50, 150, 226)
+            );
+            background-size: 100% 100%;
+            background-position: 50%;
+          }
+        }
+        &:nth-child(6) {
+          background-color: #eeeeee;
+          border: 0.3px solid rgba(0, 0, 0, 0.543);
+          border-radius: 5px;
+          box-shadow: 0px 5px 10px black;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0 100%;
+          background-image: linear-gradient(
+            to right,
+            rgb(0, 0, 0),
+            rgb(0, 0, 0)
+          );
+          transition: background-size 0.4s ease-in-out, color 0.4s ease-in-out;
+          &:hover {
+            color: white;
+            border: 0.3px solid #eeeeee;
+            background-image: linear-gradient(
+              rgb(0, 0, 0),
+              rgb(0, 0, 0)
+            );
+            background-size: 100% 100%;
+            background-position: 50%;
+          }
+        }
+
+        &:hover {
+          .phone_contacto {
+            color: white;
+            background-color: rgb(23, 187, 31);
+            transform: rotateY(360deg);
+            border: 2px solid white;
+          }
+          .email_contacto {
+            color: white;
+            background-color: rgb(202, 31, 31);
+            transform: rotateY(360deg);
+            border: 2px solid white;
+          }
+          .linkedin_contacto {
+            color: white;
+            background-color: rgb(50, 150, 226);
+            transform: rotateY(360deg);
+            border: 2px solid white;
+          }
+          .github_contacto {
+            cursor: pointer;
+            color: white;
+            background-color: rgb(0, 0, 0);
+            transform: rotateY(360deg);
+            border: 2px solid white;
+          }
+        }
+
+        .phone_contacto {
+          font-size: 20px;
+          color: rgb(23, 187, 31);
+          border: 2px solid rgb(23, 187, 31);
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          transition: 0.5s;
+        }
+        .email_contacto {
+          font-size: 20px;
+          color: rgb(202, 31, 31);
+          border: 2px solid rgb(202, 31, 31);
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          transition: 0.5s;
+        }
+        .linkedin_contacto {
+          cursor: pointer;
+          font-size: 20px;
+          color: rgb(50, 150, 226);
+          border: 2px solid rgb(50, 150, 226);
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          transition: 0.5s;
+        }
+        .github_contacto {
+          font-size: 20px;
+          color: rgb(0, 0, 0);
+          border: 2px solid rgb(0, 0, 0);
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          transition: 0.5s;
         }
       }
     }
@@ -51,11 +220,12 @@
       display: flex;
       flex-direction: column;
       align-items: start;
-      gap: 13px;
+      gap: 15px;
 
       label {
         font-size: 18px;
         font-weight: 600;
+        font-family: "Outfit";
         background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -74,12 +244,14 @@
       }
       textarea {
         width: 325px;
+        resize: none;
         border: none;
         padding: 12.5px;
         border-radius: 2px;
         background: #bcbcef;
         font-family: "Outfit";
         font-size: 16px;
+        form-sizing: conten; 
 
         &::placeholder {
           color: #828282;
@@ -90,6 +262,7 @@
         color: white;
         border-radius: 10px;
         background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
+        font-family: "Outfit";
         font-size: 16px;
         padding: 10px;
         margin-bottom: 25px;

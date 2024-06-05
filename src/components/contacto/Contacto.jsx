@@ -1,8 +1,7 @@
 import "../contacto/Contacto.css";
-import email from "../../assets/email.png";
-import telefono from "../../assets/telefono.png";
-import linkedin from "../../assets/linkedin.png";
-import github from "../../assets/github.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
 
 const Contacto = () => {
@@ -48,21 +47,23 @@ const Contacto = () => {
             ponerte en contacto en cualquier momento. Contactame a través de:
           </p>
           <div className="contacto-detalle">
-            <img src={telefono} alt="telefono" className="iconos" />{" "}
+            <FontAwesomeIcon className="phone_contacto" icon={faPhone} />
             <p>(+549) 11 2512-0868</p>
           </div>
           <div className="contacto-detalle">
-            <img src={email} alt="email" className="iconos" />{" "}
+            <FontAwesomeIcon className="email_contacto" icon={faEnvelope} />
             <p>briandavidsilvero@gmail.com</p>
           </div>
           <div className="contacto-detalle">
-            <img src={linkedin} alt="Linkedin" className="iconos" />
+            <a href="https://www.linkedin.com/in/brian-david-silvero/">
+            <FontAwesomeIcon className="linkedin_contacto" icon={faLinkedin} />
+            </a>
             <a href="https://www.linkedin.com/in/brian-david-silvero/">
               <p>https://www.linkedin.com/in/brian-david-silvero/</p>
             </a>
           </div>
           <div className="contacto-detalle">
-            <img src={github} alt="Github" className="iconos" />
+            <a href="https://github.com/BrianSilvero"><FontAwesomeIcon className="github_contacto" icon={faGithub} /></a>
             <a href="https://github.com/BrianSilvero">
               <p>https://github.com/BrianSilvero</p>
             </a>

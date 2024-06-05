@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Signika:wght@300..700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,8 +13,16 @@ body {
   height: 100vh;
   background-color: #eaeaea;
   color: #000000;
+  background-image: url(https://www.rpnation.com/gallery/carbon-fiber-background-wallpapers-1440x900.26454/full);
+  background-attachment: fixed;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
 }
 a{
   text-decoration: none;
-  color: #000000;
+  color: inherit;
+}
+li{
+  text-decoration: none;
 }
