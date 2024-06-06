@@ -5,10 +5,12 @@ const Hero = () => {
   return (
     <div id="inicio" className="hero">
       <div className="hero_all">
-        <img className="brian-silvero" src={Brian} alt="BrianSilvero" />
+        <div className="box_imagen">
+          <img className="brian-silvero" src={Brian} alt="BrianSilvero" />
+        </div>
         <div className="hero_descripcion">
           <h1>
-            Este soy yo! Me presento, <span>Brian Silvero</span> a disposición
+            Este soy yo! Me presento, <span>Brian Silvero</span> a disposición!
           </h1>
           <p>
             En esta página podras obtener toda mi información necesaria para que

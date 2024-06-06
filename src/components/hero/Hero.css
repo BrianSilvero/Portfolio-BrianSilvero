@@ -1,152 +1,189 @@
-.hero {
-  padding-top: 60px;
+  .hero {
+    padding-top: 60px;
 
-  .hero_all {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #eeeeee;
-    border-radius: 10px;
-    margin: 70px 40px 0 40px;
-    transition: 0.5s;
-    &:hover {
-      box-shadow: 0px 5px 10px #fff;
-    }
-
-    .brian-silvero {
-      position: relative;
-      bottom: 35px;
-      width: 280px;
-      height: 280px;
-      border-radius: 100%;
-      object-fit: cover;
-    }
-    .hero_descripcion {
+    .hero_all {
       display: flex;
       align-items: center;
       flex-direction: column;
-      gap: 35px;
-
-      h1 {
-        text-align: center;
-        width: 90%;
-        font-size: 42px;
-
-        span {
-          background: linear-gradient(
-            267deg,
-            #c425da -164.64%,
-            #23d5e1 288.06%
-          );
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
+      background-color: #eeeeee;
+      border-radius: 10px;
+      margin: 70px 40px 0 40px;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 0px 5px 10px #fff;
+      }
+      .box_imagen {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 35px;
+        width: 290px;
+        height: 290px;
+        overflow: hidden;
+        border-radius: 50%;
+        .brian-silvero {
+          position: relative;
+          width: 280px;
+          height: 280px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        &:hover::before{
+          inset: -10px 0px;
         }
       }
-      p {
-        width: 75%;
-        text-align: center;
-        font-size: 24px;
-        line-height: 34px;
-      }
-      .hero-accion {
+      .box_imagen::before{
+        content: '';
+        position: absolute;
+        inset: 0px 90px;
+        background: linear-gradient(267deg, #c425da -164.64%, #23d5e1 288.06%);
+        transition: 0.5s;
+        animation: animate 4s  linear infinite;
+      }      
+
+      .hero_descripcion {
         display: flex;
         align-items: center;
-        gap: 25px;
-        font-size: 24px;
-        font-weight: 500;
-        margin-bottom: 50px;
+        flex-direction: column;
+        gap: 20px;
 
-        .hero-conectar {
-          padding: 10px 25px;
-          border-radius: 50px;
-          border: 2px solid #000000;
-          background: linear-gradient(
-            267deg,
-            #c425da -164.64%,
-            #23d5e1 288.06%
-          );
-          cursor: pointer;
+        h1 {
+          text-align: center;
+          width: 90%;
+          font-size: 42px;
+          font-family: "Kalam", cursive;
 
-          &:hover {
-            border-color: #65a9ab;
-            transform: scale(1.1);
-            color: white !important;
-            transition: 0.3s;
-          }
-        }
-        .hero-resumen {
-          padding: 10px 25px;
-          border-radius: 50px;
-          background: linear-gradient(
-            267deg,
-            #43c7df -164.64%,
-            #7666c7 288.06%
-          );
-          border: 2px solid #000000;
-          cursor: pointer;
-
-          &:hover {
-            border-color: #65a9ab;
-            color: white;
-            transform: scale(1.1);
-            transition: 0.3s;
+          span {
             background: linear-gradient(
               267deg,
               #c425da -164.64%,
               #23d5e1 288.06%
             );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        p {
+          width: 75%;
+          text-align: center;
+          font-size: 24px;
+          line-height: 34px;
+          font-family: "Kalam", cursive;
+        }
+        .hero-accion {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 50px;
+
+          .hero-conectar {
+            font-family: "Outfit";
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0px 5px 10px #686D76;
+            border: 2px solid #686D76;
+            background: linear-gradient(
+              267deg,
+              #c425da -164.64%,
+              #23d5e1 288.06%
+            );
+            cursor: pointer;
+
+            &:hover { 
+              border-color: #373A40;
+              transform: scale(1.1);
+              color: white !important;
+              transition: 0.3s;
+            }
+          }
+          .hero-resumen {
+            font-family: "Outfit";
+            padding: 10px 25px;
+            border-radius: 50px;
+            background: linear-gradient(
+              267deg,
+              #43c7df -164.64%,
+              #7666c7 288.06%
+            );
+            box-shadow: 0px 5px 10px #686D76;
+            border: 2px solid #686D76;
+            cursor: pointer;
+
+            &:hover {
+              border-color: #373A40;
+              color: white !important;
+              transform: scale(1.1);
+              transition: 0.3s;
+              background: linear-gradient(
+                267deg,
+                #c425da -164.64%,
+                #23d5e1 288.06%
+              );
+            }
           }
         }
       }
     }
   }
-}
 
-/* Mediaqueries */
-
-@media (max-width: 886px) {
-  .hero {
-    h1 {
-      font-size: 35px;
+  /* Funciones para efectos */
+  @keyframes animate {
+    0%{
+      transform: rotate(0deg);
     }
-    p {
-      font-size: 20px;
+    100%{
+      transform: rotate(365deg);
     }
-    .hero-accion {
-      font-size: 20px;
-      font-weight: bold;
-    }
+    
   }
-}
+  /* Mediaqueries */
 
-@media (max-width: 710px) {
-  .hero {
-    gap: 30px;
-    .brian-silvero {
-      width: 220px !important;
-      height: 220px !important;
-    }
-    h1 {
-      font-size: 35px;
-    }
-    p {
-      width: 68%;
-      font-size: 20px;
-      line-height: 20px;
-    }
-    .hero-accion {
-      gap: 20px;
-      font-size: 18px;
-      margin-bottom: 30px;
-
-      .hero-conectar {
-        padding: 5px 20px;
-        border-radius: 40px;
+  @media (max-width: 886px) {
+    .hero {
+      h1 {
+        font-size: 35px;
       }
-      .hero-resumen {
-        padding: 5px 20px;
-        border-radius: 40px;
+      p {
+        font-size: 20px;
+      }
+      .hero-accion {
+        font-size: 20px;
+        font-weight: bold;
       }
     }
   }
-}
+
+  @media (max-width: 710px) {
+    .hero {
+      gap: 30px;
+      .brian-silvero {
+        width: 220px !important;
+        height: 220px !important;
+      }
+      h1 {
+        font-size: 35px;
+      }
+      p {
+        width: 68%;
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .hero-accion {
+        gap: 20px;
+        font-size: 18px;
+        margin-bottom: 30px;
+
+        .hero-conectar {
+          padding: 5px 20px;
+          border-radius: 40px;
+        }
+        .hero-resumen {
+          padding: 5px 20px;
+          border-radius: 40px;
+        }
+      }
+    }
+  }

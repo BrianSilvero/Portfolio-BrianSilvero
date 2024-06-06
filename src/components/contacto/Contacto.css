@@ -14,11 +14,16 @@
       font-size: 50px;
       font-weight: 650;
       font-family: "Signika", sans-serif;
+      color: white;
     }
   }
   .contacto-seccion {
     display: flex;
     gap: 30px;
+    background-color: #B4B4B8;
+    margin: 0 40px 0 40px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
 
     .conctacto-izquierda {
       display: flex;
@@ -36,6 +41,7 @@
         max-width: 550px;
         font-size: 16px;
         line-height: 20px;
+        font-family: "Kalam", cursive;
       }
 
       .contacto-detalle {
@@ -236,7 +242,7 @@
         height: 30px;
         padding-left: 20px;
         border-radius: 2px;
-        background: #bcbcef;
+        background: #F3F7EC;
         color: black;
         font-weight: 400;
         font-family: "Outfit";
@@ -248,10 +254,9 @@
         border: none;
         padding: 12.5px;
         border-radius: 2px;
-        background: #bcbcef;
+        background: #F3F7EC;
         font-family: "Outfit";
         font-size: 16px;
-        form-sizing: conten; 
 
         &::placeholder {
           color: #828282;
