@@ -3,17 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
+import { useRef } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+
+
+
 
 const Contacto = () => {
+  const formRef = useRef(null);
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-
+  
     formData.append("access_key", "3e0c1242-4147-4c6c-9873-a510c468c0d2");
-
+  
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-
+  
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -22,19 +29,26 @@ const Contacto = () => {
       },
       body: json,
     }).then((res) => res.json());
-
+  
     if (res.success) {
       Swal.fire({
         title: "Muchas gracias!",
-        text: "Tu mensaje ha sido enviado con exito! ",
+        text: "Tu mensaje ha sido enviado con éxito!",
         icon: "success",
         buttons: "Aceptar",
+      }).then(() => {
+        formRef.current.reset();
+        toast.success("Mensaje enviado 😎", {
+          position: "bottom-right",
+          duration: 6000,
+        });
       });
     }
   };
 
   return (
     <div id="contacto" className="conctacto">
+      <Toaster />
       <div className="contacto-titulo">
         <h2>Contactame</h2>
       </div>
@@ -69,8 +83,8 @@ const Contacto = () => {
             </a>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="contacto-derecha">
-          <label htmlFor="name">Tu Nombre</label>
+        <form ref={formRef} onSubmit={onSubmit} className="contacto-derecha">
+          <label htmlFor="name">Tu Nombre y Apellido</label>
           <input
             type="text"
             id="name"
