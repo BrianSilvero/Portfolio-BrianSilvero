@@ -4,23 +4,18 @@ import useTypewriter from "../hooks/useTypeWriter";
 
 const About = () => {
   const [skip, setSkip] = useState(false);
-  const text = `¡Hola! Bienvenidos a mi portfolio <br><br> Soy estudiante de Ingeniería en Sistemas Informáticos, enfocado en ingresar al mundo de la programación y desarrollar habilidades tecnológicas. Actualmente, complemento mi formación con la carrera de Desarrollador Full-Stack en CoderHouse.
-  <br><br>
-  Además de mi educación formal, he ampliado mis conocimientos de forma autodidacta, leyendo documentación y viendo videos de programadores experimentados. Mi objetivo es convertirme en un profesional en el desarrollo de aplicaciones web.
-  <br><br>
-  Tengo experiencia en programación con HTML, CSS, y JavaScript, y manejo frameworks y bibliotecas como React JS y Node.js. He obtenido los siguientes certificados en CoderHouse:
-  <br><br>
-  - Data Analytics: MICROSOFT SQL SERVER, POWER BI y EXCEL
-  <br>
-  - Desarrollador Web: HTML, CSS, SASS, BOOSTRAP, GIT, GITHUB.
-  <br>
-  - JavaScript.
-  <br>
-  - React-JS (En curso)
-  <br><br>
-  Estoy dispuesto a contribuir en proyectos innovadores, aportando mis conocimientos y aprendiendo continuamente en el campo de la programación.
-  <br><br>
-  Gracias por visitar mi portfolio. Estoy disponible para colaborar en tus proyectos.`;
+  const text = `¡Hola! Soy Brian Silvero.<br><br>
+
+Estudiante de la Tecnicatura Universitaria en Programación (UTN), con interés en el desarrollo web, el backend y el análisis de datos.<br><br>
+
+Trabajo con HTML, CSS, JavaScript, React, Python, SQL y Power BI. Combino mi formación académica con proyectos personales para seguir creciendo como Desarrollador Junior.<br><br>
+
+Me considero una persona curiosa, responsable y orientada al aprendizaje continuo. Disfruto resolver problemas, crear soluciones simples y efectivas, y mejorar un poco cada día.<br><br>
+
+Mi objetivo es incorporarme a un equipo IT donde pueda aportar valor, aprender de la experiencia real y participar en proyectos que generen impacto.<br><br>
+
+Gracias por visitar mi portfolio.
+`;
 
   const typewriterElement = useTypewriter(text, 30, skip);
 
